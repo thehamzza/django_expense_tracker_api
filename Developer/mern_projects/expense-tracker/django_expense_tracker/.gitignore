@@ -1,0 +1,29 @@
+# System files
+.DS_Store
+.Trash/
+.CFUserTextEncoding
+.ipython/
+.matplotlib/
+.node_repl_history
+.npm/
+.streamlit/
+.viminfo
+.vscode/
+.zsh_history
+.zsh_sessions/
+.zshrc
+.env
+
+# Directories
+Desktop/
+Documents/
+Downloads/
+Library/
+Movies/
+Music/
+Pictures/
+Public/
+nltk_data/
+node_modules/
+django-env/
+expense-tracker/
