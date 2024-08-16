@@ -15,15 +15,27 @@ from pathlib import Path
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+from decouple import config
+
+SECRET_KEY = config('SECRET_KEY')
+DATABASE_NAME = config('DATABASE_NAME')
+DATABASE_USER = config('DATABASE_USER')
+DATABASE_PASSWORD = config('DATABASE_PASSWORD')
+DATABASE_HOST = config('DATABASE_HOST')
+DATABASE_PORT = config('DATABASE_PORT')
+DATABASE_NAME = config('DATABASE_NAME')
+DEBUG = config('DEBUG', default=False, cast=bool)
+
+
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-=yiiw-14smuvl(nhpdfva!wv2c0map-q=pi=c=45zsso52_w7v'
+#SECRET_KEY = 'django-insecure-=yiiw-14smuvl(nhpdfva!wv2c0map-q=pi=c=45zsso52_w7v'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+#DEBUG = True
 
 ALLOWED_HOSTS = ['localhost', '127.0.0.1', '.vercel.app']
 
@@ -90,11 +102,11 @@ WSGI_APPLICATION = 'django_expense_tracker.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'postgres',  # Supabase database name
-        'USER': 'postgres.ximsewwxsikzbwyjwlew',  # Supabase username
-        'PASSWORD': '3rg7ZXh8BGgq4Ewe',  # Supabase password
-        'HOST': 'aws-0-ap-southeast-1.pooler.supabase.com',  # Supabase host (e.g., db.your-project-id.supabase.co)
-        'PORT': '6543',  
+        'NAME': DATABASE_NAME, # Supabase database name
+        'USER': DATABASE_USER, # Supabase username
+        'PASSWORD': DATABASE_PASSWORD,  # Supabase password
+        'HOST': DATABASE_HOST,  # Supabase host (e.g., db.your-project-id.supabase.co)
+        'PORT': DATABASE_PORT
     }
 }
 
