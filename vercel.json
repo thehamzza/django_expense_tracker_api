@@ -2,7 +2,7 @@
 
     "builds": [{
 
-        "src": "django_expense_tracker/wsgi.py",
+        "src": "django-expense-tracker/wsgi.py",
 
         "use": "@vercel/python",
 
@@ -16,7 +16,7 @@
 
             "src": "/(.*)",
 
-            "dest": "django_expense_tracker/wsgi.py"
+            "dest": "django-expense-tracker/wsgi.py"
 
         }
 
