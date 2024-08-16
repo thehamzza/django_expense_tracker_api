@@ -67,9 +67,11 @@ MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
 ]
 
-CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000",
-]
+# CORS_ALLOWED_ORIGINS = [
+#     "http://localhost:3000",
+# ]
+
+CORS_ALLOWED_ORIGINS = CORS_ALLOWED_ORIGINS
 
 ROOT_URLCONF = 'django_expense_tracker.urls'
 
