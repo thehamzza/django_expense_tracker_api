@@ -81,10 +81,20 @@ WSGI_APPLICATION = 'django_expense_tracker.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'postgres',  # Supabase database name
+        'USER': 'postgres.ximsewwxsikzbwyjwlew',  # Supabase username
+        'PASSWORD': '3rg7ZXh8BGgq4Ewe',  # Supabase password
+        'HOST': 'aws-0-ap-southeast-1.pooler.supabase.com',  # Supabase host (e.g., db.your-project-id.supabase.co)
+        'PORT': '6543',  
     }
 }
 
