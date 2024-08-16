@@ -15,7 +15,7 @@ from pathlib import Path
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-from decouple import config
+from decouple import config, Csv
 
 SECRET_KEY = config('SECRET_KEY')
 DATABASE_NAME = config('DATABASE_NAME')
@@ -25,6 +25,8 @@ DATABASE_HOST = config('DATABASE_HOST')
 DATABASE_PORT = config('DATABASE_PORT')
 DATABASE_NAME = config('DATABASE_NAME')
 DEBUG = config('DEBUG', default=False, cast=bool)
+CORS_ALLOWED_ORIGINS = config('CORS_ALLOWED_ORIGINS', cast=Csv())
+#The Csv() cast allows you to specify multiple origins in your .env file like this:
 
 
 
