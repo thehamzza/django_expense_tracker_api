@@ -2,6 +2,12 @@
 
 # Expense Tracker Application
 
+![Django API](https://github.com/thehamzza/django_expense_tracker_api/blob/main/api-django.png)
+
+Live backend API: https://django-expense-tracker-api.vercel.app/
+
+Live Web App: https://react-expense-tracker-frontend.vercel.app/
+
 ## Table of Contents
 1. [Project Overview](#project-overview)
 2. [Prerequisites](#prerequisites)
